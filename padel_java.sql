@@ -35,8 +35,8 @@ CREATE TABLE PISTA(
     FOREIGN KEY (fk_dni) REFERENCES USUARIS(dni)
     FOREIGN KEY (fk_id_pista) REFERENCES PISTA(id_pista)
     dia_reserva DATE NOT NULL,
-    hora_inici TIMESTAMPS NOT NULL,
-    hora_fi TIMESTAMPS NOT NULL
+    hora_inici TIMESTAMP NOT NULL,
+    hora_fi TIMESTAMP NOT NULL
 );
 
 

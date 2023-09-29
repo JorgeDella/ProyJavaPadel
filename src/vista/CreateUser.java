@@ -4,6 +4,7 @@
  */
 package vista;
 
+import controlador.Control;
 /**
  *
  * @author isard
@@ -91,6 +92,11 @@ public class CreateUser extends javax.swing.JFrame {
 
         jButtonAtras.setText("Atras");
         jButtonAtras.setPreferredSize(new java.awt.Dimension(100, 25));
+        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtrasActionPerformed(evt);
+            }
+        });
 
         jPasswordFieldContrasenya.setMaximumSize(new java.awt.Dimension(200, 25));
         jPasswordFieldContrasenya.setMinimumSize(new java.awt.Dimension(100, 15));
@@ -210,7 +216,13 @@ public class CreateUser extends javax.swing.JFrame {
 
     private void jButtonRegistraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistraActionPerformed
         // TODO add your handling code here:
+        Control.nouUsuari();
     }//GEN-LAST:event_jButtonRegistraActionPerformed
+
+    private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed
+        // TODO add your handling code here:
+        Control.cancelarUsuari();
+    }//GEN-LAST:event_jButtonAtrasActionPerformed
 
     /**
      * @param args the command line arguments

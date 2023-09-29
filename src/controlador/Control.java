@@ -1,10 +1,13 @@
 package controlador;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 import vista.Visualizar;
 import vista.CreateUser;
@@ -18,6 +21,28 @@ public class Control {
     public static CreatePista pista = new CreatePista();
     
     public static Modelo model = new Modelo();
+    
+    public static Statement conexion() {
+        String driver = "com.mysql.jdbc.Driver";
+        String cadenaConexion = "jdbc:mysql://localhost/agenda";
+        String usuario = "root";
+        String contraseña = "";
+        Connection conexion;
+        Statement statement = null;
+        try {
+            Class.forName(driver);
+            conexion = DriverManager.getConnection(cadenaConexion, usuario, contraseña);
+            if (conexion != null) {
+                statement = conexion.createStatement();
+            }
+            else {
+                System.out.println("Error");
+            }    
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "No se ha podido establecer una conexion con la BD" + e.getMessage());
+        }
+        return statement;
+    }
     
     public static void pestanyaAdmin() {
         view.setTitle("Administrador");
@@ -91,5 +116,23 @@ public class Control {
             Logger.getLogger(Control.class.getName()).log(Level.SEVERE, null, ex);
         }
         cancelarPista();
+    }
+    
+    public static void insertTablaPista() throws SQLException {
+        Statement estado = conexion();
+        String SQL = "INSERT INTO pista(estat, disponibilitat, ubicacio, sol, pared) VALUES( ?, ?, ?, ?, ?)";
+        try(PreparedStatement prepareQuery = estado.getConnection().prepareStatement(SQL)){
+            prepareQuery.setString(1, pista.jTextFieldEstat.getText());
+            prepareQuery.setBoolean(2, pista.jCheckBoxDisponibilitat.isSelected());
+            prepareQuery.setString(3, pista.jTextFieldUbicacio.getText());
+            prepareQuery.setString(4, pista.jTextFieldSol.getText());
+            prepareQuery.setString(5, pista.jTextFieldParets.getText());
+            prepareQuery.executeUpdate();
+        }
+    }
+    
+    public static void cancelarPista() {
+        pestanyaAdmin();
+        pista.setVisible(false);
     }
 }

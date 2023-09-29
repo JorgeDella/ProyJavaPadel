@@ -61,7 +61,7 @@ public class Control {
         }
     }
     
-    public static void cancelarContacto() {
+    public static void cancelarUsuari() {
         pestanyaAdmin();
         user.setVisible(false);
     }

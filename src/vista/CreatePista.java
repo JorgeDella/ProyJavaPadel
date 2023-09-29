@@ -4,8 +4,6 @@
  */
 package vista;
 
-import controlador.Control;
-
 /**
  *
  * @author isard
@@ -187,12 +185,10 @@ public class CreatePista extends javax.swing.JFrame {
 
     private void jButtonRegistraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistraActionPerformed
         // TODO add your handling code here:
-        Control.novaPista();
     }//GEN-LAST:event_jButtonRegistraActionPerformed
 
     private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed
         // TODO add your handling code here:
-        Control.cancelarPista();
     }//GEN-LAST:event_jButtonAtrasActionPerformed
 
     /**

@@ -51,9 +51,19 @@ public class Visualizar extends javax.swing.JFrame {
         });
 
         jTextFieldBuscar.setPreferredSize(new java.awt.Dimension(225, 25));
+        jTextFieldBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldBuscarActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Buscar");
         jButton1.setPreferredSize(new java.awt.Dimension(82, 25));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jScrollPaneLista.setPreferredSize(new java.awt.Dimension(50, 150));
 
@@ -148,6 +158,14 @@ public class Visualizar extends javax.swing.JFrame {
         pista.setBounds(750, 250, 500, 350);
         this.setVisible(false);*/
     }//GEN-LAST:event_jButtonPistesActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextFieldBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldBuscarActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

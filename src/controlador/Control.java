@@ -3,8 +3,10 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -24,7 +26,7 @@ public class Control {
     
     public static Statement conexion() {
         String driver = "com.mysql.jdbc.Driver";
-        String cadenaConexion = "jdbc:mysql://localhost/agenda";
+        String cadenaConexion = "jdbc:mysql://localhost/padel_java";
         String usuario = "root";
         String contraseña = "";
         Connection conexion;
@@ -59,7 +61,7 @@ public class Control {
         user.jTextFieldCognoms.setText("");
         user.jTextFieldCorreu.setText("");
         user.jTextFieldTelefon.setText("");
-        //user.jTextFieldContrasenya.setText("");
+        user.jPasswordFieldContrasenya.setText("");
         
         view.setVisible(false);
         crearUsuari();
@@ -134,5 +136,50 @@ public class Control {
     public static void cancelarPista() {
         pestanyaAdmin();
         pista.setVisible(false);
+    }
+    
+    public static void buscarUsuaris() {
+        String busqueda = view.jTextFieldBuscar.getText();
+        if(busqueda.length() == 0) {
+            try {
+                listaUsuaris("SELECT * FROM usuaris");
+            } catch(SQLException ex) {
+                Logger.getLogger(Control.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else {
+            String SQL = "SELECT * FROM usuaris WHERE nombre LIKE '"+busqueda+"%';";
+            try {
+                listaUsuaris(SQL);
+            } catch(SQLException ex) {
+                Logger.getLogger(Control.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }    
+    }
+    
+    public static void listaUsuaris(String SQL) throws SQLException {
+        Statement estado = conexion();
+        ResultSet result = estado.executeQuery(SQL);
+        ArrayList<String> personas = new ArrayList<>();
+        while (result.next()) {
+            String nombre = result.getString(1);
+            String apellidos = result.getString(2);
+            personas.add(nombre + " " + apellidos);
+        }
+        if(personas.size() == 0) {
+            model.nombre = view.jTextFieldBuscar.getText();
+            añadir();
+            añadir.jTextFieldNombre.setText(model.nombre);
+        }
+        view.jListContactos.setModel(new javax.swing.AbstractListModel<String>() {
+
+            public int getSize() {
+                return personas.size();
+            }
+
+            public String getElementAt(int i) {
+                return personas.get(i);
+            }
+        });
     }
 }

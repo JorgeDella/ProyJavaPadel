@@ -22,98 +22,103 @@ public class Visualizar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        BtnCreateUsrs = new javax.swing.JButton();
-        BtnEditUsrs = new javax.swing.JButton();
-        BtnDeleteUsrs = new javax.swing.JButton();
-        BtnCreateTrack = new javax.swing.JButton();
-        BtnEditTrack = new javax.swing.JButton();
+        jButtonPistes = new javax.swing.JButton();
+        jTextFieldBuscar = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jScrollPaneLista = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jButtonAfegir = new javax.swing.JButton();
+        jButtonModificar = new javax.swing.JButton();
+        jButtonEliminar = new javax.swing.JButton();
+
+        jButton2.setText("jButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Administracio i Gestio");
+        jLabel1.setText("USUARIS");
         jLabel1.setAlignmentY(0.0F);
-        jLabel1.setPreferredSize(new java.awt.Dimension(125, 20));
+        jLabel1.setPreferredSize(new java.awt.Dimension(50, 20));
 
-        BtnCreateUsrs.setText("Nou Usuari");
-        BtnCreateUsrs.setPreferredSize(new java.awt.Dimension(125, 25));
-        BtnCreateUsrs.addActionListener(new java.awt.event.ActionListener() {
+        jButtonPistes.setText("Pistes");
+        jButtonPistes.setPreferredSize(new java.awt.Dimension(70, 20));
+        jButtonPistes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnCreateUsrsActionPerformed(evt);
+                jButtonPistesActionPerformed(evt);
             }
         });
 
-        BtnEditUsrs.setText("Modifica Usuari");
-        BtnEditUsrs.setPreferredSize(new java.awt.Dimension(125, 25));
-        BtnEditUsrs.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnEditUsrsActionPerformed(evt);
-            }
-        });
+        jTextFieldBuscar.setPreferredSize(new java.awt.Dimension(225, 25));
 
-        BtnDeleteUsrs.setText("Suprimeix Usuari");
-        BtnDeleteUsrs.setPreferredSize(new java.awt.Dimension(125, 25));
-        BtnDeleteUsrs.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnDeleteUsrsActionPerformed(evt);
-            }
-        });
+        jButton1.setText("Buscar");
+        jButton1.setPreferredSize(new java.awt.Dimension(82, 25));
 
-        BtnCreateTrack.setText("Nova Pista");
-        BtnCreateTrack.setPreferredSize(new java.awt.Dimension(125, 25));
-        BtnCreateTrack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnCreateTrackActionPerformed(evt);
-            }
-        });
+        jScrollPaneLista.setPreferredSize(new java.awt.Dimension(50, 150));
 
-        BtnEditTrack.setText("Modifica Pista");
-        BtnEditTrack.setPreferredSize(new java.awt.Dimension(125, 25));
-        BtnEditTrack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnEditTrackActionPerformed(evt);
-            }
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
+        jScrollPaneLista.setViewportView(jList1);
+
+        jButtonAfegir.setText("Afegir");
+        jButtonAfegir.setPreferredSize(new java.awt.Dimension(82, 25));
+
+        jButtonModificar.setText("Modificar");
+        jButtonModificar.setPreferredSize(new java.awt.Dimension(82, 25));
+
+        jButtonEliminar.setText("Eliminar");
+        jButtonEliminar.setPreferredSize(new java.awt.Dimension(82, 25));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(159, 159, 159)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonPistes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPaneLista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTextFieldBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(BtnCreateUsrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BtnCreateTrack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BtnEditUsrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BtnDeleteUsrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(132, 132, 132)
-                        .addComponent(BtnEditTrack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(128, 128, 128))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonAfegir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonPistes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnCreateUsrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnCreateTrack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnEditTrack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnEditUsrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(BtnDeleteUsrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(133, Short.MAX_VALUE))
+                    .addComponent(jTextFieldBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPaneLista, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jButtonAfegir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -136,45 +141,13 @@ public class Visualizar extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnCreateUsrsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCreateUsrsActionPerformed
+    private void jButtonPistesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPistesActionPerformed
         // TODO add your handling code here:
-        /*CreateUser crtusr = new CreateUser();
-        crtusr.setVisible(true);
-        crtusr.setBounds(750, 250, 500, 350);
+        /*VisualizarP pista = new VisualizarP();
+        pista.setVisible(true);
+        pista.setBounds(750, 250, 500, 350);
         this.setVisible(false);*/
-    }//GEN-LAST:event_BtnCreateUsrsActionPerformed
-
-    private void BtnEditUsrsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditUsrsActionPerformed
-        // TODO add your handling code here:
-        /*CreateUser crtusr = new CreateUser();
-        crtusr.setVisible(true);
-        crtusr.setBounds(750, 250, 500, 350);
-        this.setVisible(false);*/
-    }//GEN-LAST:event_BtnEditUsrsActionPerformed
-
-    private void BtnDeleteUsrsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDeleteUsrsActionPerformed
-        // TODO add your handling code here:
-        /*CreateUser crtusr = new CreateUser();
-        crtusr.setVisible(true);
-        crtusr.setBounds(750, 250, 500, 350);
-        this.setVisible(false);*/
-    }//GEN-LAST:event_BtnDeleteUsrsActionPerformed
-
-    private void BtnCreateTrackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCreateTrackActionPerformed
-        // TODO add your handling code here:
-        /*CreateTrack crtrack = new CreateTrack();
-        crtrack.setVisible(true);
-        crtrack.setBounds(750, 250, 500, 350);
-        this.setVisible(false);*/
-    }//GEN-LAST:event_BtnCreateTrackActionPerformed
-
-    private void BtnEditTrackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditTrackActionPerformed
-        // TODO add your handling code here:
-        /*CreateUser crtusr = new CreateUser();
-        crtusr.setVisible(true);
-        crtusr.setBounds(750, 250, 500, 350);
-        this.setVisible(false);*/
-    }//GEN-LAST:event_BtnEditTrackActionPerformed
+    }//GEN-LAST:event_jButtonPistesActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -209,12 +182,16 @@ public class Visualizar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnCreateTrack;
-    private javax.swing.JButton BtnCreateUsrs;
-    private javax.swing.JButton BtnDeleteUsrs;
-    private javax.swing.JButton BtnEditTrack;
-    private javax.swing.JButton BtnEditUsrs;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButtonAfegir;
+    private javax.swing.JButton jButtonEliminar;
+    private javax.swing.JButton jButtonModificar;
+    private javax.swing.JButton jButtonPistes;
     private javax.swing.JLabel jLabel1;
+    public javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPaneLista;
+    public javax.swing.JTextField jTextFieldBuscar;
     // End of variables declaration//GEN-END:variables
 }

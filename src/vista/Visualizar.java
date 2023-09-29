@@ -141,39 +141,39 @@ public class Visualizar extends javax.swing.JFrame {
         /*CreateUser crtusr = new CreateUser();
         crtusr.setVisible(true);
         crtusr.setBounds(750, 250, 500, 350);
-        this.setVisible(false);
+        this.setVisible(false);*/
     }//GEN-LAST:event_BtnCreateUsrsActionPerformed
 
     private void BtnEditUsrsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditUsrsActionPerformed
         // TODO add your handling code here:
-        CreateUsr crtusr = new CreateUsr();
+        /*CreateUser crtusr = new CreateUser();
         crtusr.setVisible(true);
         crtusr.setBounds(750, 250, 500, 350);
-        this.setVisible(false);
+        this.setVisible(false);*/
     }//GEN-LAST:event_BtnEditUsrsActionPerformed
 
     private void BtnDeleteUsrsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDeleteUsrsActionPerformed
         // TODO add your handling code here:
-        CreateUsr crtusr = new CreateUsr();
+        /*CreateUser crtusr = new CreateUser();
         crtusr.setVisible(true);
         crtusr.setBounds(750, 250, 500, 350);
-        this.setVisible(false);
+        this.setVisible(false);*/
     }//GEN-LAST:event_BtnDeleteUsrsActionPerformed
 
     private void BtnCreateTrackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCreateTrackActionPerformed
         // TODO add your handling code here:
-        CreateTrack crtrack = new CreateTrack();
+        /*CreateTrack crtrack = new CreateTrack();
         crtrack.setVisible(true);
         crtrack.setBounds(750, 250, 500, 350);
-        this.setVisible(false);
+        this.setVisible(false);*/
     }//GEN-LAST:event_BtnCreateTrackActionPerformed
 
     private void BtnEditTrackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditTrackActionPerformed
         // TODO add your handling code here:
-        CreateUsr crtusr = new CreateUsr();
+        /*CreateUser crtusr = new CreateUser();
         crtusr.setVisible(true);
         crtusr.setBounds(750, 250, 500, 350);
-        this.setVisible(false);
+        this.setVisible(false);*/
     }//GEN-LAST:event_BtnEditTrackActionPerformed
 
     public static void main(String args[]) {

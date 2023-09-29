@@ -45,6 +45,7 @@ public class CreateUser extends javax.swing.JFrame {
         jTextFieldTelefon = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(400, 300));
 
         Titol.setText("REGISTRA EL NOU USUARI");
         Titol.setAlignmentY(1.0F);

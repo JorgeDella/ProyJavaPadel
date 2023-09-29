@@ -4,7 +4,7 @@ public class Connect {
         public static Connect Connection(){
         //Atributos
             String driver="com.mysql.jdbc.Driver";
-            String cadenaConnexio="jdbc:mysql://127.0.0.1/agenda";
+            String cadenaConnexio="jdbc:mysql://127.0.0.1/padel_java";
             String usr="root";
             String psswd="";
             Connect con = null;

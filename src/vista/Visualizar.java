@@ -155,7 +155,7 @@ public class Visualizar extends javax.swing.JFrame {
 
     private void BtnCreateUsrsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCreateUsrsActionPerformed
         // TODO add your handling code here:
-        CreateUsr crtusr = new CreateUsr();
+        /*CreateUsr crtusr = new CreateUsr();
         crtusr.setVisible(true);
         crtusr.setBounds(750, 250, 500, 350);
         this.setVisible(false);
@@ -198,7 +198,7 @@ public class Visualizar extends javax.swing.JFrame {
         CreateUsr crtusr = new CreateUsr();
         crtusr.setVisible(true);
         crtusr.setBounds(750, 250, 500, 350);
-        this.setVisible(false);
+        this.setVisible(false);*/
     }//GEN-LAST:event_BtnDeleteTrackActionPerformed
 
     /**

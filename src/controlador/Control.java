@@ -8,12 +8,14 @@ import java.util.logging.Logger;
 
 import vista.Visualizar;
 import vista.CreateUser;
+import vista.CreatePista;
 
 import modelo.Modelo;
 
 public class Control {
     public static Visualizar view = new Visualizar();
     public static CreateUser user = new CreateUser();
+    public static CreatePista pista = new CreatePista();
     
     public static Modelo model = new Modelo();
     
@@ -32,7 +34,7 @@ public class Control {
         user.jTextFieldCognoms.setText("");
         user.jTextFieldCorreu.setText("");
         user.jTextFieldTelefon.setText("");
-        user.jTextFieldContrasenya.setText("");
+        //user.jTextFieldContrasenya.setText("");
         
         view.setVisible(false);
         crearUsuari();
@@ -56,7 +58,9 @@ public class Control {
             prepareQuery.setString(3, user.jTextFieldCognoms.getText());
             prepareQuery.setString(4, user.jTextFieldCorreu.getText());
             prepareQuery.setString(5, user.jTextFieldTelefon.getText());
-            prepareQuery.setString(6, user.jPasswordFieldContrasenya.getPassword());
+            char[] contrasenyaChar = user.jPasswordFieldContrasenya.getPassword();
+            String contrasenya = new String(contrasenyaChar);
+            prepareQuery.setString(6, contrasenya);
             prepareQuery.executeUpdate();
         }
     }
@@ -64,5 +68,28 @@ public class Control {
     public static void cancelarUsuari() {
         pestanyaAdmin();
         user.setVisible(false);
+    }
+    
+    public static void novaPista() {
+        user.setTitle("Nova Pista");
+        user.setLocationRelativeTo(null);
+        user.setVisible(true);
+        user.jTextFieldEstat.setText("");
+        user.jCheckBoxDisponibilitat.setSelected(true);
+        user.jTextFieldUbicacio.setText("");
+        user.jTextFieldSol.setText("");
+        user.jTextFieldParets.setText("");
+        
+        view.setVisible(false);
+        crearPista();
+    }
+    
+    public static void crearPista() {
+        try {
+            insertTablaPista();
+        } catch(SQLException ex) {
+            Logger.getLogger(Control.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        cancelarPista();
     }
 }

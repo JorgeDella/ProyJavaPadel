@@ -257,12 +257,12 @@ public class CreateUser extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordFieldContrasenya;
+    public javax.swing.JPasswordField jPasswordFieldContrasenya;
     private javax.swing.JProgressBar jProgressBar1;
-    private javax.swing.JTextField jTextFieldCognoms;
-    private javax.swing.JTextField jTextFieldCorreu;
-    private javax.swing.JTextField jTextFieldDNI;
-    private javax.swing.JTextField jTextFieldNom;
-    private javax.swing.JTextField jTextFieldTelefon;
+    public javax.swing.JTextField jTextFieldCognoms;
+    public javax.swing.JTextField jTextFieldCorreu;
+    public javax.swing.JTextField jTextFieldDNI;
+    public javax.swing.JTextField jTextFieldNom;
+    public javax.swing.JTextField jTextFieldTelefon;
     // End of variables declaration//GEN-END:variables
 }

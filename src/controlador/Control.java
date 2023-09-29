@@ -27,12 +27,12 @@ public class Control {
         user.setTitle("Nou Usuari");
         user.setLocationRelativeTo(null);
         user.setVisible(true);
-        user.TextDNI.setText("");
-        user.TextNom.setText("");
-        user.TextCognoms.setText("");
-        user.TextCorreu.setText("");
-        user.TextTelefon.setText("");
-        user.TextContrasenya.setText("");
+        user.jTextFieldDNI.setText("");
+        user.jTextFieldNom.setText("");
+        user.jTextFieldCognoms.setText("");
+        user.jTextFieldCorreu.setText("");
+        user.jTextFieldTelefon.setText("");
+        user.jTextFieldContrasenya.setText("");
         
         view.setVisible(false);
         crearUsuari();
@@ -56,7 +56,7 @@ public class Control {
             prepareQuery.setString(3, user.jTextFieldCognoms.getText());
             prepareQuery.setString(4, user.jTextFieldCorreu.getText());
             prepareQuery.setString(5, user.jTextFieldTelefon.getText());
-            prepareQuery.setString(6, user.jPasswordFieldContrasenya.getText());
+            prepareQuery.setString(6, user.jPasswordFieldContrasenya.getPassword());
             prepareQuery.executeUpdate();
         }
     }

@@ -240,6 +240,6 @@ public class CreatePista extends javax.swing.JFrame {
     public javax.swing.JTextField jTextFieldEstat;
     public javax.swing.JTextField jTextFieldParets;
     public javax.swing.JTextField jTextFieldSol;
-    private javax.swing.JTextField jTextFieldUbicacio;
+    public javax.swing.JTextField jTextFieldUbicacio;
     // End of variables declaration//GEN-END:variables
 }

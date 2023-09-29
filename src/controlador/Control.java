@@ -71,14 +71,14 @@ public class Control {
     }
     
     public static void novaPista() {
-        user.setTitle("Nova Pista");
-        user.setLocationRelativeTo(null);
-        user.setVisible(true);
-        user.jTextFieldEstat.setText("");
-        user.jCheckBoxDisponibilitat.setSelected(true);
-        user.jTextFieldUbicacio.setText("");
-        user.jTextFieldSol.setText("");
-        user.jTextFieldParets.setText("");
+        pista.setTitle("Nova Pista");
+        pista.setLocationRelativeTo(null);
+        pista.setVisible(true);
+        pista.jTextFieldEstat.setText("");
+        pista.jCheckBoxDisponibilitat.setSelected(true);
+        pista.jTextFieldUbicacio.setText("");
+        pista.jTextFieldSol.setText("");
+        pista.jTextFieldParets.setText("");
         
         view.setVisible(false);
         crearPista();

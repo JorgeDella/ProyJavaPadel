@@ -29,7 +29,6 @@ public class Visualizar extends javax.swing.JFrame {
         BtnDeleteUsrs = new javax.swing.JButton();
         BtnCreateTrack = new javax.swing.JButton();
         BtnEditTrack = new javax.swing.JButton();
-        BtnDeleteTrack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,14 +76,6 @@ public class Visualizar extends javax.swing.JFrame {
             }
         });
 
-        BtnDeleteTrack.setText("Suprimeix Pista");
-        BtnDeleteTrack.setPreferredSize(new java.awt.Dimension(125, 25));
-        BtnDeleteTrack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnDeleteTrackActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -101,9 +92,7 @@ public class Visualizar extends javax.swing.JFrame {
                             .addComponent(BtnEditUsrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(BtnDeleteUsrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(132, 132, 132)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BtnEditTrack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BtnDeleteTrack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addComponent(BtnEditTrack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -123,9 +112,7 @@ public class Visualizar extends javax.swing.JFrame {
                     .addComponent(BtnEditTrack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtnEditUsrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnDeleteTrack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnDeleteUsrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(BtnDeleteUsrs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(133, Short.MAX_VALUE))
         );
 
@@ -151,7 +138,7 @@ public class Visualizar extends javax.swing.JFrame {
 
     private void BtnCreateUsrsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCreateUsrsActionPerformed
         // TODO add your handling code here:
-        /*CreateUsr crtusr = new CreateUsr();
+        /*CreateUser crtusr = new CreateUser();
         crtusr.setVisible(true);
         crtusr.setBounds(750, 250, 500, 350);
         this.setVisible(false);
@@ -189,14 +176,6 @@ public class Visualizar extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_BtnEditTrackActionPerformed
 
-    private void BtnDeleteTrackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDeleteTrackActionPerformed
-        // TODO add your handling code here:
-        CreateUsr crtusr = new CreateUsr();
-        crtusr.setVisible(true);
-        crtusr.setBounds(750, 250, 500, 350);
-        this.setVisible(false);*/
-    }//GEN-LAST:event_BtnDeleteTrackActionPerformed
-
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -232,7 +211,6 @@ public class Visualizar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCreateTrack;
     private javax.swing.JButton BtnCreateUsrs;
-    private javax.swing.JButton BtnDeleteTrack;
     private javax.swing.JButton BtnDeleteUsrs;
     private javax.swing.JButton BtnEditTrack;
     private javax.swing.JButton BtnEditUsrs;

@@ -60,10 +60,7 @@
                               <Component id="BtnDeleteUsrs" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="BtnEditTrack" min="-2" max="-2" attributes="0"/>
-                              <Component id="BtnDeleteTrack" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="BtnEditTrack" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -90,10 +87,7 @@
                       <Component id="BtnEditUsrs" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="BtnDeleteTrack" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="BtnDeleteUsrs" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="BtnDeleteUsrs" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="133" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -162,17 +156,6 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnEditTrackActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="BtnDeleteTrack">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Suprimeix Pista"/>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[125, 25]"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnDeleteTrackActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

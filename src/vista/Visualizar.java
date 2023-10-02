@@ -28,8 +28,8 @@ public class Visualizar extends javax.swing.JFrame {
         jButtonPistes = new javax.swing.JButton();
         jTextFieldBuscar = new javax.swing.JTextField();
         jButtonBuscar = new javax.swing.JButton();
-        jScrollPaneLista = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jScrollPaneLlista = new javax.swing.JScrollPane();
+        jListUsuaris = new javax.swing.JList<>();
         jButtonAfegir = new javax.swing.JButton();
         jButtonModificar = new javax.swing.JButton();
         jButtonEliminar = new javax.swing.JButton();
@@ -65,14 +65,14 @@ public class Visualizar extends javax.swing.JFrame {
             }
         });
 
-        jScrollPaneLista.setPreferredSize(new java.awt.Dimension(50, 150));
+        jScrollPaneLlista.setPreferredSize(new java.awt.Dimension(50, 150));
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jListUsuaris.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPaneLista.setViewportView(jList1);
+        jScrollPaneLlista.setViewportView(jListUsuaris);
 
         jButtonAfegir.setText("Afegir");
         jButtonAfegir.setPreferredSize(new java.awt.Dimension(82, 25));
@@ -96,7 +96,7 @@ public class Visualizar extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPaneLista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPaneLlista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jTextFieldBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,7 +127,7 @@ public class Visualizar extends javax.swing.JFrame {
                         .addComponent(jButtonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPaneLista, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPaneLlista, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -201,15 +201,15 @@ public class Visualizar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButtonAfegir;
-    private javax.swing.JButton jButtonBuscar;
-    private javax.swing.JButton jButtonEliminar;
-    private javax.swing.JButton jButtonModificar;
-    private javax.swing.JButton jButtonPistes;
+    public javax.swing.JButton jButtonAfegir;
+    public javax.swing.JButton jButtonBuscar;
+    public javax.swing.JButton jButtonEliminar;
+    public javax.swing.JButton jButtonModificar;
+    public javax.swing.JButton jButtonPistes;
     private javax.swing.JLabel jLabel1;
-    public javax.swing.JList<String> jList1;
+    public javax.swing.JList<String> jListUsuaris;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPaneLista;
+    public javax.swing.JScrollPane jScrollPaneLlista;
     public javax.swing.JTextField jTextFieldBuscar;
     // End of variables declaration//GEN-END:variables
 }

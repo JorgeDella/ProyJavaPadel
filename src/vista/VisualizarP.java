@@ -32,8 +32,8 @@ public class VisualizarP extends javax.swing.JFrame {
         jButtonUsuaris = new javax.swing.JButton();
         jTextFieldBuscar = new javax.swing.JTextField();
         jButtonBuscar = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jScrollPaneLlista = new javax.swing.JScrollPane();
+        jListPistes = new javax.swing.JList<>();
         jButtonAfegir = new javax.swing.JButton();
         jButtonModificar = new javax.swing.JButton();
         jButtonEliminar = new javax.swing.JButton();
@@ -59,12 +59,12 @@ public class VisualizarP extends javax.swing.JFrame {
         jButtonBuscar.setText("Buscar");
         jButtonBuscar.setPreferredSize(new java.awt.Dimension(82, 25));
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jListPistes.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPaneLlista.setViewportView(jListPistes);
 
         jButtonAfegir.setText("Afegir");
         jButtonAfegir.setToolTipText("");
@@ -90,7 +90,7 @@ public class VisualizarP extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1)
+                            .addComponent(jScrollPaneLlista)
                             .addComponent(jTextFieldBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,7 +115,7 @@ public class VisualizarP extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPaneLlista, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(21, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(52, 52, 52)
@@ -127,7 +127,7 @@ public class VisualizarP extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
 
-        jButtonAfegir.getAccessibleContext().setAccessibleName("jButtonAfegir");
+        jButtonAfegir.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -190,15 +190,15 @@ public class VisualizarP extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButtonAfegir;
-    private javax.swing.JButton jButtonBuscar;
-    private javax.swing.JButton jButtonEliminar;
-    private javax.swing.JButton jButtonModificar;
-    private javax.swing.JButton jButtonUsuaris;
+    public javax.swing.JButton jButtonAfegir;
+    public javax.swing.JButton jButtonBuscar;
+    public javax.swing.JButton jButtonEliminar;
+    public javax.swing.JButton jButtonModificar;
+    public javax.swing.JButton jButtonUsuaris;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JList<String> jList1;
+    public javax.swing.JList<String> jListPistes;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextFieldBuscar;
+    public javax.swing.JScrollPane jScrollPaneLlista;
+    public javax.swing.JTextField jTextFieldBuscar;
     // End of variables declaration//GEN-END:variables
 }

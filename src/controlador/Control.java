@@ -24,6 +24,7 @@ public class Control {
     
     public static Modelo model = new Modelo();
     
+    //Conexio a la base de dades
     public static Statement conexion() {
         String driver = "com.mysql.jdbc.Driver";
         String cadenaConexion = "jdbc:mysql://localhost/padel_java";
@@ -46,12 +47,14 @@ public class Control {
         return statement;
     }
     
+    //Pestanya d'administracio de l'admin
     public static void pestanyaAdmin() {
         view.setTitle("Administrador");
         view.setLocationRelativeTo(null);
         view.setVisible(true); 
     }
     
+    //Administracio d'usuaris
     public static void nouUsuari() {
         user.setTitle("Nou Usuari");
         user.setLocationRelativeTo(null);
@@ -67,6 +70,7 @@ public class Control {
         crearUsuari();
     }
     
+    //Creacio d'usuaris
     public static void crearUsuari() {
         try {
             insertTabla();
@@ -76,6 +80,13 @@ public class Control {
         cancelarUsuari();
     }
     
+    //Cancelacio de la creacio d'usuaris
+    public static void cancelarUsuari() {
+        pestanyaAdmin();
+        user.setVisible(false);
+    }
+    
+    //Per insertar dades a la taula
     public static void insertTabla() throws SQLException {
         Statement estado = conexion();
         String SQL = "INSERT INTO usuaris(dni, nom, cognoms, correu, telefon, contrasenya) VALUES( ?, ?, ?, ?, ?, ?)";
@@ -92,11 +103,7 @@ public class Control {
         }
     }
     
-    public static void cancelarUsuari() {
-        pestanyaAdmin();
-        user.setVisible(false);
-    }
-    
+    //Administracio de pistes
     public static void novaPista() {
         pista.setTitle("Nova Pista");
         pista.setLocationRelativeTo(null);
@@ -111,6 +118,7 @@ public class Control {
         crearPista();
     }
     
+    //Creacio de pistes
     public static void crearPista() {
         try {
             insertTablaPista();
@@ -120,6 +128,7 @@ public class Control {
         cancelarPista();
     }
     
+    //Funcio per insertar pistes
     public static void insertTablaPista() throws SQLException {
         Statement estado = conexion();
         String SQL = "INSERT INTO pista(estat, disponibilitat, ubicacio, sol, pared) VALUES( ?, ?, ?, ?, ?)";
@@ -133,11 +142,13 @@ public class Control {
         }
     }
     
+    //Cancelacio de la creacio de pistes
     public static void cancelarPista() {
         pestanyaAdmin();
         pista.setVisible(false);
     }
     
+    //Buscador d'usuaris
     public static void buscarUsuaris() {
         String busqueda = view.jTextFieldBuscar.getText();
         if(busqueda.length() == 0) {
@@ -157,6 +168,7 @@ public class Control {
         }    
     }
     
+    //Llista d'usuaris
     public static void listaUsuaris(String SQL) throws SQLException {
         Statement estado = conexion();
         ResultSet result = estado.executeQuery(SQL);

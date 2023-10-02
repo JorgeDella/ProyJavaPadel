@@ -190,7 +190,7 @@ public class Control {
             nouUsuari();
             user.jTextFieldDNI.setText(model.dni);
         }
-        view.jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        view.jListUsuaris.setModel(new javax.swing.AbstractListModel<String>() {
 
             public int getSize() {
                 return usuaris.size();

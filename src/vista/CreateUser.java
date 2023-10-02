@@ -48,6 +48,7 @@ public class CreateUser extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(400, 300));
 
+        Titol.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Titol.setText("REGISTRA EL NOU USUARI");
         Titol.setAlignmentY(1.0F);
         Titol.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);

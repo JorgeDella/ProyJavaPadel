@@ -144,6 +144,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="Titol">
           <Properties>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="REGISTRA EL NOU USUARI"/>
             <Property name="alignmentY" type="float" value="1.0"/>
             <Property name="horizontalTextPosition" type="int" value="4"/>

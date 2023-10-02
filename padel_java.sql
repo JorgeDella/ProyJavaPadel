@@ -1,3 +1,4 @@
+
 --  Crear base de datos
 CREATE DATABASE padel_java;
 USE padel_java;

@@ -49,13 +49,45 @@ public class Control {
         return statement;
     }
     
+    public static void inici() {
+        sign.setTitle("Sign In");
+        sign.setLocationRelativeTo(null);
+        sign.setVisible(true); 
+    }
+    
     public static void iniciSessio() throws SQLException {
+        if(sign.jCheckBoxAdmin.isSelected()) {
+            String SQL = "SELECT * FROM admin WHERE dni = ? AND contrasenya = ? ;";
+            consultaIniciSessio(SQL);
+        }
+        else {
+            String SQL = "SELECT * FROM usuaris WHERE dni = ? AND contrasenya = ? ;";
+            consultaIniciSessio(SQL);
+        } 
+    }
+    
+    //Consulta inici sessio
+    public static void consultaIniciSessio(String SQL) {
         Statement estado = conexion();
-        model.dni = sign.jTextFieldDNI.getText();
-        char[] contrasenyaChar = sign.jPasswordFieldContrasenya.getPassword();
-        model.contrasenya = new String(contrasenyaChar);
-        if(sign.jCheckBoxAdmin.isSelected())
-        ResultSet result = estado.executeQuery("SELECT * FROM usuaris WHERE dni = "+ model.dni +" AND contrasenya = "+ model.contrasenya +";");
+        try(PreparedStatement prepareQuery = estado.getConnection().prepareStatement(SQL)) {
+                prepareQuery.setString(1, sign.jTextFieldDNI.getText());
+                char[] contrasenyaChar = sign.jPasswordFieldContrasenya.getPassword();
+                String contrasenya = new String(contrasenyaChar);
+                prepareQuery.setString(2, contrasenya);
+                
+                ResultSet result = prepareQuery.executeQuery();
+                
+                if(result.next()) {
+                    pestanyaAdmin();
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "No s'ha trobat cap coincidencia a la base de dades.");
+                }
+            }
+            catch (SQLException e) {
+                // Manejar la excepción (por ejemplo, mostrar un mensaje de error)
+                e.printStackTrace();
+            }
     }
     
     //Pestanya d'administracio de l'admin

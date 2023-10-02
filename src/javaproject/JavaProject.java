@@ -8,6 +8,6 @@ public class JavaProject {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        Connect con = new Connect();
+        Control.inici();
     }
 }

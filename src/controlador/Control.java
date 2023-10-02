@@ -17,6 +17,8 @@ import vista.CreatePista;
 import vista.SignIn;
 
 import modelo.Modelo;
+ 
+ import controlador.Connect;
 
 public class Control {
     public static SignIn sign = new SignIn();
@@ -26,10 +28,12 @@ public class Control {
     
     public static Modelo model = new Modelo();
     
+    public static Connect conexio = new Connect();
+    
     //Conexio a la base de dades
     public static Statement conexion() {
         String driver = "com.mysql.jdbc.Driver";
-        String cadenaConexion = "jdbc:mysql://localhost/padel_java";
+        String cadenaConexion = "jdbc:mysql://127.0.0.1/padel_java";
         String usuario = "root";
         String contraseña = "";
         Connection conexion;
@@ -48,6 +52,7 @@ public class Control {
         }
         return statement;
     }
+    
     
     public static void inici() {
         sign.setTitle("Sign In");

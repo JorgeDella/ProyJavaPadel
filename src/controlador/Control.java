@@ -49,8 +49,13 @@ public class Control {
         return statement;
     }
     
-    public static void iniciSessio() {
-        
+    public static void iniciSessio() throws SQLException {
+        Statement estado = conexion();
+        model.dni = sign.jTextFieldDNI.getText();
+        char[] contrasenyaChar = sign.jPasswordFieldContrasenya.getPassword();
+        model.contrasenya = new String(contrasenyaChar);
+        if(sign.jCheckBoxAdmin.isSelected())
+        ResultSet result = estado.executeQuery("SELECT * FROM usuaris WHERE dni = "+ model.dni +" AND contrasenya = "+ model.contrasenya +";");
     }
     
     //Pestanya d'administracio de l'admin

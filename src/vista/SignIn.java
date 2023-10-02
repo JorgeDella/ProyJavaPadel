@@ -5,6 +5,9 @@
 package vista;
 
 import controlador.Control;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -115,8 +118,12 @@ public class SignIn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonSessioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSessioActionPerformed
-        // TODO add your handling code here:
-        Control.iniciSessio();
+        try {
+            // TODO add your handling code here:
+            Control.iniciSessio();
+        } catch (SQLException ex) {
+            Logger.getLogger(SignIn.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButtonSessioActionPerformed
 
     /**
@@ -156,7 +163,7 @@ public class SignIn extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonSessio;
-    private javax.swing.JCheckBox jCheckBoxAdmin;
+    public javax.swing.JCheckBox jCheckBoxAdmin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

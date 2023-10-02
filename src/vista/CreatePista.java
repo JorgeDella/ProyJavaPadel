@@ -231,8 +231,8 @@ public class CreatePista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAtras;
-    private javax.swing.JButton jButtonRegistra;
+    public javax.swing.JButton jButtonAtras;
+    public javax.swing.JButton jButtonRegistra;
     public javax.swing.JCheckBox jCheckBoxDisponibilitat;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

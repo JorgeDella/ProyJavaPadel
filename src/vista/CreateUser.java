@@ -261,8 +261,8 @@ public class CreateUser extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Titol;
-    private javax.swing.JButton jButtonAtras;
-    private javax.swing.JButton jButtonRegistra;
+    public javax.swing.JButton jButtonAtras;
+    public javax.swing.JButton jButtonRegistra;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

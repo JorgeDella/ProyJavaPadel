@@ -155,8 +155,8 @@ public class SignIn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonSessio;
-    private javax.swing.JCheckBox jCheckBoxAdmin;
+    public javax.swing.JButton jButtonSessio;
+    public javax.swing.JCheckBox jCheckBoxAdmin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -14,10 +14,12 @@ import javax.swing.JOptionPane;
 import vista.Visualizar;
 import vista.CreateUser;
 import vista.CreatePista;
+import vista.SignIn;
 
 import modelo.Modelo;
 
 public class Control {
+    public static SignIn sign = new SignIn();
     public static Visualizar view = new Visualizar();
     public static CreateUser user = new CreateUser();
     public static CreatePista pista = new CreatePista();
@@ -45,6 +47,10 @@ public class Control {
             JOptionPane.showMessageDialog(null, "No se ha podido establecer una conexion con la BD" + e.getMessage());
         }
         return statement;
+    }
+    
+    public static void iniciSessio() {
+        
     }
     
     //Pestanya d'administracio de l'admin
@@ -159,7 +165,7 @@ public class Control {
             }
         }
         else {
-            String SQL = "SELECT * FROM usuaris WHERE nombre LIKE '"+busqueda+"%';";
+            String SQL = "SELECT * FROM usuaris WHERE dni LIKE '"+busqueda+"%';";
             try {
                 listaUsuaris(SQL);
             } catch(SQLException ex) {
@@ -172,25 +178,26 @@ public class Control {
     public static void listaUsuaris(String SQL) throws SQLException {
         Statement estado = conexion();
         ResultSet result = estado.executeQuery(SQL);
-        ArrayList<String> personas = new ArrayList<>();
+        ArrayList<String> usuaris = new ArrayList<>();
         while (result.next()) {
-            String nombre = result.getString(1);
-            String apellidos = result.getString(2);
-            personas.add(nombre + " " + apellidos);
+            String dni = result.getString(1);
+            String nombre = result.getString(2);
+            String apellidos = result.getString(3);
+            usuaris.add(dni + ": " + nombre + " " + apellidos);
         }
-        if(personas.size() == 0) {
-            model.nombre = view.jTextFieldBuscar.getText();
-            añadir();
-            añadir.jTextFieldNombre.setText(model.nombre);
+        if(usuaris.size() == 0) {
+            model.dni = view.jTextFieldBuscar.getText();
+            nouUsuari();
+            user.jTextFieldDNI.setText(model.dni);
         }
-        view.jListContactos.setModel(new javax.swing.AbstractListModel<String>() {
+        view.jList1.setModel(new javax.swing.AbstractListModel<String>() {
 
             public int getSize() {
-                return personas.size();
+                return usuaris.size();
             }
 
             public String getElementAt(int i) {
-                return personas.get(i);
+                return usuaris.get(i);
             }
         });
     }

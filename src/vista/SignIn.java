@@ -4,6 +4,8 @@
  */
 package vista;
 
+import controlador.Control;
+
 /**
  *
  * @author isard
@@ -58,6 +60,11 @@ public class SignIn extends javax.swing.JFrame {
 
         jButtonSessio.setText("Inicia Sessio");
         jButtonSessio.setPreferredSize(new java.awt.Dimension(125, 25));
+        jButtonSessio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSessioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,6 +110,11 @@ public class SignIn extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonSessioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSessioActionPerformed
+        // TODO add your handling code here:
+        Control.iniciSessio();
+    }//GEN-LAST:event_jButtonSessioActionPerformed
 
     /**
      * @param args the command line arguments

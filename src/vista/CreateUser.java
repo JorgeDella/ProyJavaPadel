@@ -48,6 +48,7 @@ public class CreateUser extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(400, 300));
 
+        Titol.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Titol.setText("REGISTRA EL NOU USUARI");
         Titol.setAlignmentY(1.0F);
         Titol.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -249,6 +250,9 @@ public class CreateUser extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(CreateUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

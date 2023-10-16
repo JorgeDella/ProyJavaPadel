@@ -41,3 +41,6 @@ CREATE TABLE RESERVA(
     hora_inici TIMESTAMP,
     hora_fi TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Insertar un admin
+INSERT INTO ADMIN(dni, nom, contrasenya) VALUES ('123', 'admin', 'admin');

@@ -189,7 +189,7 @@ public class CreatePista extends javax.swing.JFrame {
 
     private void jButtonRegistraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistraActionPerformed
         // TODO add your handling code here:
-        Control.novaPista();
+        Control.crearPista();
     }//GEN-LAST:event_jButtonRegistraActionPerformed
 
     private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed

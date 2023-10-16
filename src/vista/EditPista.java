@@ -4,6 +4,10 @@
  */
 package vista;
 
+import controlador.Control;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author isard
@@ -84,6 +88,11 @@ public class EditPista extends javax.swing.JFrame {
         jButtonModifica.setText("Modifica");
         jButtonModifica.setToolTipText("");
         jButtonModifica.setPreferredSize(new java.awt.Dimension(100, 25));
+        jButtonModifica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonModificaActionPerformed(evt);
+            }
+        });
 
         jButtonAtras.setText("Atras");
         jButtonAtras.setPreferredSize(new java.awt.Dimension(100, 25));
@@ -184,8 +193,19 @@ public class EditPista extends javax.swing.JFrame {
 
     private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed
         // TODO add your handling code here:
-        Control.cancelarPista();
+        Control.cancelarEditarPistes();
     }//GEN-LAST:event_jButtonAtrasActionPerformed
+
+    private void jButtonModificaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificaActionPerformed
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            Control.updateTablaPistes();
+        } catch (SQLException ex) {
+            Logger.getLogger(EditUser.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Control.cancelarEditarPistes();
+    }//GEN-LAST:event_jButtonModificaActionPerformed
 
     /**
      * @param args the command line arguments
